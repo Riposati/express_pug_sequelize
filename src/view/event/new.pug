@@ -1,0 +1,11 @@
+extends ./../layout/main
+
+block content
+    h1 #{msg}
+    form(action='/events/', method='POST')
+        div(class='form-group')
+            input(type='text', class='form-control', placeholder='enter event name', name='name')
+        div(class='form-group')
+            textarea(class='form-control', placeholder='enter event description', name='description')
+        div(class='form-group')
+            button(type='submit', class='btn btn-success') Save
